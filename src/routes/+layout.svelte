@@ -5,11 +5,11 @@
     import Nav from "../lib/components/Nav.svelte";
 </script>
 
-<div class="relative">
-    <div class="fixed right-1 top-1 -z-10">
+<div class="relative px-3 w-full max-w-7xl bg-gray-100 h-full min-h-screen">
+    <div class="fixed right-1 top-1 z-10 ">
         <Nav />
     </div>
-    <div class="mt-32
+    <div class="pt-32
     ">
     <slot />
     </div>

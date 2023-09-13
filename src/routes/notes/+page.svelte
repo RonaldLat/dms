@@ -4,6 +4,8 @@
     import { currentUser } from "$lib/store/authState.js";
     import { notes } from "$lib/store/notes.js";
 
+    export let data;
+
     const getNotes = async () => {
         let { data, error } = await supabase
             .from("notes")
@@ -15,6 +17,8 @@
     };
     getNotes()
         console.log("notes", notes);
+
+    console.log(data)
 
 </script>
 
