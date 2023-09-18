@@ -1,11 +1,21 @@
 <script>
-let password,email;
-async function signIn() {
-const { data, error } = await supabase.auth.signInWithPassword({
+
+	import { supabase } from '$lib/supabaseClient.js';
+    import { goto } from "$app/navigation";
+
+let email, password;
+async function login(){
+const { data,  error } = await supabase.auth.signInWithPassword({
   email: email,
-  password: password,
+  password: password
 })
-}
+if(data.user.id){
+console.log('user;',data)
+        goto('/notes')
+    }
+console.log(data)
+console.log(error)
+    }
 </script>
 
 <div class="max-w-[280px] mx-auto">
@@ -72,31 +82,28 @@ const { data, error } = await supabase.auth.signInWithPassword({
             <span class="text-gray-700 font-medium">Continue with Google</span>
         </button>
         <span class="mb-2 text-gray-900">Or</span>
-        <form on:submit|preventDefault={signIn} >
+        <form on:submit|preventDefault={login}>
             <input
                 type="text"
                 class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium"
                 placeholder="Email"
-                value=""
 
-bind:this={email}
-
+                bind:value={email}
             />
             <input
                 type="password"
                 class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium"
                 placeholder="Password"
-                value=""
-bind:this={password}
+                bind:value={password}
             />
             <button
-                class="bg-slate-500 hover:bg-slate-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]"
+                class="bg-violet-500 hover:bg-violet-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]"
                 >Login</button
             >
         </form>
         <p class="text-center mt-3 text-[14px]">
             Don't have an account?
-            <a href="/register" class="text-gray-600">Sign Up</a>
+            <a href="/register" class="text-violet-600">Sign Up</a>
         </p>
     </div>
 </div>

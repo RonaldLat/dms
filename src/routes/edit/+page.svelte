@@ -21,6 +21,7 @@
     console.log($currentUser);
     console.log($currentNote);
 </script>
+<p class="text-2xl mx-auto w-full text-center italic">Edit</p>
 
 <form class="flex-col gap-5 w-4/5 mx-auto mt-5" on:submit={editNote}>
     <div class="relative mb-3">
@@ -55,8 +56,8 @@
         >
             Note
         </label>
-        <button type="submit" class="py-3 px-6 bg-blue-400 mt-4 rounded-sm"
-            >Create</button
+        <button type="submit" class="py-3 px-6 bg-violet-400 mt-4 rounded-sm"
+            >Edit</button
         >
     </div>
 </form>

@@ -143,13 +143,13 @@
             />
             <button
                 type="submit"
-                class="bg-slate-500 hover:bg-slate-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]"
+                class="bg-violet-500 hover:bg-slate-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]"
                 >Register</button
             >
         </form>
         <p class="text-center mt-3 text-[14px]">
             Already have an account?
-            <a href="/login" class="text-gray-600">Log In</a>
+            <a href="/login" class="text-violet-600">Log In</a>
         </p>
     </div>
 </div>
