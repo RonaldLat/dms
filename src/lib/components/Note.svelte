@@ -31,7 +31,7 @@
 
 <div class="rounded w-full">
     <div
-        class="w-full h-64 flex flex-col justify-between dark:bg-gray-800 dark:border-gray-700 rounded-lg border border-gray-400 mb-6 py-5 px-4 bg-gray-200"
+        class="w-full h-fit flex flex-col justify-between dark:bg-gray-800 dark:border-gray-700 rounded-lg border border-gray-400 mb-6 py-5 px-4 bg-gray-200"
         transition:fly
     >
         <div>

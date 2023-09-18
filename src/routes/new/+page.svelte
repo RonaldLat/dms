@@ -21,7 +21,7 @@ onMount(async()=>{
         toolbar: toolbarOptions
       },
       theme: "snow",
-      placeholder: "Write your story..."
+      placeholder: "Enter text..."
     });
         quill.on('text-change', function() {
   var delta = quill.getContents();
@@ -56,11 +56,16 @@ onMount(async()=>{
 
 </script>
 
-
-<div class="editor-wrapper rounded-md max-w-6xl bg-violet-50">
+<div class="h-full flex flex-col gap-16 items-center justify-items-center w-full content-center hidden">
+<div class="editor-wrapper rounded-md max-w-6xl bg-violet-50 h-44 my-auto w-full max-h-max">
   <div bind:this={editor} />
 </div>
-<form class="flex-col gap-5 w-4/5 mx-auto mt-64 pt-6 -z-10 hidden" on:submit={createNote}>
+<button class="bg-transparent hover:bg-violet-500 text-violet-700 font-semibold hover:text-white py-2 px-4 border border-violet-500 hover:border-transparent rounded">
+  Save
+</button>
+</div>
+
+<form class="flex-col gap-5 w-4/5 mx-auto mt-6 pt-6 -z-10 " on:submit={createNote}>
     <div class="relative mb-3">
         <input
             bind:value={noteDetails.title}
@@ -83,7 +88,7 @@ onMount(async()=>{
         <textarea
             bind:value={noteDetails.note}
             name="email"
-            class="text-gray-dark border-2 peer block w-full appearance-none rounded-sm border-gray-400 px-0 py-[14px] pl-6 text-sm focus:border-gray-800 focus:outline-none focus:ring-0"
+            class="text-gray-dark border-2 peer block w-full appearance-none rounded-sm border-gray-400 px-0 py-[14px] pl-6 text-sm focus:border-gray-800 focus:outline-none focus:ring-0 h-56"
             placeholder=" "
             required
         />
@@ -93,8 +98,8 @@ onMount(async()=>{
         >
             Note
         </label>
-        <button type="submit" class="py-3 px-6 bg-blue-400 mt-4 rounded-sm"
-            >Create</button
+        <button type="submit" class="py-3 px-6 bg-violet-400 mt-4 rounded-sm"
+            >Save</button
         >
     </div>
 </form>

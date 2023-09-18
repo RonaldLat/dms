@@ -13,7 +13,7 @@
     ">
     <slot />
     </div>
-    <div class="fixed right-6 bottom-2 z-50 bg-blue-600 p-3 rounded-md" on:click={()=>goto('/new')}>
+    <div class="fixed right-6 bottom-2 z-50 bg-violet-500 p-3 rounded-md cursor-pointer hover:bg-violet-600 ease-in duration-100 delay-150" on:click={()=>goto('/new')}>
         <Icon icon="mdi:note-plus" class=" text-gray-100  text-3xl"  />
     </div>
 </div>
