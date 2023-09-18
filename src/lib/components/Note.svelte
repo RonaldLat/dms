@@ -4,6 +4,7 @@
     import { supabase } from "$lib/supabaseClient.js";
     import { currentNote } from "$lib/store/currentNote.js";
     import { notes } from "$lib/store/notes.js";
+    import { fly } from "svelte/transition";
     export let note;
 
     console.log("notes", note);
@@ -31,6 +32,7 @@
 <div class="rounded w-full">
     <div
         class="w-full h-64 flex flex-col justify-between dark:bg-gray-800 dark:border-gray-700 rounded-lg border border-gray-400 mb-6 py-5 px-4 bg-gray-200"
+        transition:fly
     >
         <div>
             <h4 class="text-gray-800 dark:text-gray-100 font-bold mb-3">
