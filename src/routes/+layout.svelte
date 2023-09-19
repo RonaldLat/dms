@@ -8,7 +8,7 @@
 
 <div class="relative px-3 w-full max-w-7xl bg-gray-100 h-full min-h-screen">
 <h1 class="fixed left-2  top-2 border-violet-400 rounded-md border bg-violet-100 p-2 z-10 text-violet-600 font-extrabold text-2xl">Ron Docs</h1>
-    <div class="fixed right-1 top-1 z-10 ">
+    <div class="fixed right-1 top-0 z-10 ">
         <Nav />
     </div>
     <div class="pt-32
